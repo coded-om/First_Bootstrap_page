@@ -1,0 +1,363 @@
+:root {
+  --main-color: #c4dfdf;
+  --secandry-color: #d2e9e9;
+  --thared-color: #e3f4f4;
+  --font-color: #47a992;
+  --activ-color: #545b77;
+  --motion-time: 0.3s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* start nav bar edit  */
+.navbar {
+  background-color: var(--main-color) !important;
+}
+/* end nav bar edit  */
+.navbar-brand img {
+  width: 50px !important ;
+  height: auto !important ;
+}
+/* color system */
+.c-secandry {
+  color: var(--secandry-color);
+}
+.c-thared {
+  color: var(--thared-color) !important;
+}
+.c-font {
+  color: var(--font-color);
+}
+.c-activ {
+  color: var(--activ-color);
+}
+nav ul a {
+  color: var(--font-color) !important;
+}
+/* end color system  */
+
+nav ul a:active,
+nav ul a:hover,
+nav ul a:focus {
+  color: var(--activ-color) !important;
+}
+
+nav .search svg {
+  color: var(--active-color);
+}
+
+.navbar-toggler {
+  transition: var(--motion-time);
+}
+.navbar-toggler[aria-expanded="true"],
+.navbar-toggler[aria-expanded="false"] {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border: 2px solid var(--activ-color);
+}
+
+.btn:hover {
+  background-color: var(--activ-color) !important;
+  color: white !important;
+}
+.btn:focus {
+  box-shadow: none;
+}
+
+/* start landing  */
+
+.overlay {
+  left: 0;
+  top: 0;
+  height: calc(100vh - 76px);
+  background-color: rgb(0 0 0 / 60%);
+  z-index: 0;
+}
+
+.landing {
+  position: relative;
+  background-image: url("../imgs/Ez.jpg");
+  min-height: calc(100vh - 76px);
+  box-shadow: inset 1px 0px 20px 0px black;
+  background-size: cover;
+}
+
+/* end landing  */
+
+/* start advantig css */
+.future {
+  box-shadow: inset 1px 3px 5px 0px black;
+}
+/* *******************************start main titel css ***************  */
+
+.main-title::before {
+  content: " ";
+  width: 15%;
+  height: 1%;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  box-shadow: 0px -1px 15px 1px var(--main-color);
+}
+
+.img-titel {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--activ-color);
+  box-shadow: 0px 0px 19px 1px var(--activ-color);
+}
+
+/* **********************end main titel css ********************* */
+.holder-content {
+  height: 200px;
+}
+.holder-content svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.back-icon {
+  font-size: 10rem;
+}
+
+.front-icon {
+  bottom: 20px;
+}
+
+.holder-content {
+  filter: blur(4px);
+  transition: var(--motion-time);
+}
+.holder-content:hover {
+  filter: none;
+}
+/* end advantig css */
+
+/* start section work  */
+.work {
+  background-color: var(--thared-color);
+}
+.work .main-title::before {
+  display: none;
+}
+
+.work ul::after {
+  content: " ";
+  position: absolute;
+  background-color: var(--font-color);
+  width: 25%;
+  height: 5%;
+  bottom: -10px;
+}
+.work ul li {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.work ul li:not(.active):hover {
+  color: var(--activ-color);
+  background-color: #545b7706;
+}
+.active {
+  background-color: #545b7736;
+}
+
+.work .box {
+  padding: 5px;
+  transition: var(--motion-time);
+}
+
+.box::before {
+  content: attr(data-bck-word);
+  position: absolute;
+  background-color: #545b776f;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: var(--motion-time);
+  font-size: 1.3rem;
+  transform: translateY(calc(-100% - 5px));
+}
+
+.work .box img {
+  transition: var(--motion-time);
+}
+
+.work .box:hover img {
+  filter: blur(4px);
+}
+.work .box:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.work .box:hover::before {
+  transform: translateY(0);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.work .btn {
+  width: 200px;
+  padding: 5px 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/* End section work  */
+
+/* start team section */
+.team {
+  background-color: #545b77ac;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+  margin-bottom: 2px;
+  filter: blur(1px) contrast(115%);
+}
+.card img {
+  position: relative;
+  transition: var(--motion-time);
+}
+
+.card-body {
+  transition: var(--motion-time);
+  position: absolute;
+  bottom: -100%;
+}
+.card-file-css {
+  overflow: hidden;
+  border: none !important;
+  transition: var(--motion-time);
+}
+.card-file-css:hover {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.card-file-css:hover .card-body {
+  bottom: 0;
+  box-shadow: 0px -1px 15px 1px black;
+  background-color: #545b77df;
+}
+
+/* end team section */
+
+/* start bransh section */
+.bransh img {
+  transition: var(--motion-time);
+  max-height: 100px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(50%);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.bransh img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.bransh h3::before {
+  content: " ";
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  height: 3px;
+  width: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 10px #545b77d0;
+  border-radius: 3rem;
+  background-color: #545b77;
+}
+/* end bransh section */
+
+/* start buysub section  */
+.buysub {
+  color: #fff;
+  position: relative;
+  background-image: url("../imgs/2205_w026_n002_1983b_p1_1983.jpg");
+  background-size: cover;
+  box-shadow: 0px 1px 20px 11px rgba(71, 169, 146, 0.273);
+}
+
+.buysub .btn {
+  border-color: #fff;
+}
+
+.buy-text {
+  left: -50%;
+  transform: translate(50%, 50%);
+}
+
+/* end buysub section  */
+
+/* start contact-us section  */
+
+.contact-us {
+  background-color: var(--thared-color);
+}
+
+.massge {
+  border: none;
+  border-bottom: 2px solid #545b77;
+  color: #545b77;
+  padding-left: 5px;
+  outline: none;
+}
+
+input[type="text"] {
+  transition: var(--motion-time);
+}
+input[type="text"]:focus {
+  outline: #fff;
+}
+input[type="submit"] {
+  border-color: #545b77;
+}
+
+::placeholder {
+  padding-left: 5px;
+}
+
+/* end contact-us section  */
+
+/* start footer  */
+
+#coded {
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: rgb(126, 246, 255) 0px 0px 8px 0px,
+    rgb(153 202 224) 0px 0px 20px 0px;
+}
+#coded img {
+  transform: scale(3);
+}
+footer {
+  position: relative;
+  background-color: var(--activ-color);
+}
+footer img {
+  width: 7rem;
+}
+
+footer ul li {
+  padding: 5px 3px;
+  color: var(--font-color);
+}
+footer ul a {
+  color: rgba(255, 255, 255, 0.5);
+}
+footer ul a:hover {
+  color: var(--font-color);
+}
+/* end footer  */
